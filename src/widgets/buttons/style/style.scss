@@ -1,0 +1,15 @@
+button{
+    padding:15px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-bottom:20px;
+    transition:.25s ease-in-out all;
+    &:hover{
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        transition:.25s ease-in-out all;
+    }
+}
+.button-2{
+    padding:20px 40px;
+    border-radius:15px;
+}

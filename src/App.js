@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+// packages
+import React from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+// style
+import './App.scss';
+import './responsiveness.css'
+// pages
+import BadRequest from './pages/BadRequest'
+// pages -- landing
+import Home from './pages/Home'
+// pages -- authentication
+import Authentication from './pages/Authentication'
+import ForgotPassword from './pages/Authentication/ForgotPassword'
+import NewPassword from './pages/Authentication/NewPassword'
+import AccountRequest from './pages/Authentication/AccountRequest'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Routing = () => {
+  return(
+    <Routes>
+      {/* landing */}
+      <Route path='/' element={<Home />} />
+      {/* authentication */}
+      <Route path='/login' element={<Authentication />} />
+      <Route path='/forgot-password' element={<ForgotPassword />} />
+      <Route path='/new-password' element={<NewPassword />} />
+      <Route path='/account-request' element={<AccountRequest />} />
+      {/* bad page */}
+      {/* <BadRequest /> */}
+    </Routes>
+  )
+}
+
+const App = () => {
+  return <div className="App">
+    <Router>
+      <Routing />
+    </Router>
+  </div>
 }
 
 export default App;

@@ -1,0 +1,173 @@
+.classroom{
+    // position:relative;
+    .section-content{
+        .section-content-inner{
+            padding:0 50px;
+            .font-40{
+                font-weight:bolder;
+            }
+            .classroom-navigation{
+                font-weight:bold;
+                margin:20px 0 30px 0;
+                transition:.5s ease-in-out all;
+                color:rgb(172, 172, 172);
+                .classroom-navigation-item{
+                    display:inline-block;
+                    margin-right:30px;
+                    cursor:pointer;
+                    transition:.5s ease-in-out all;
+                    &:hover{
+                        color:#000;
+                        transition:.5s ease-in-out all;
+                    }
+                    .dot{
+                        width:5px;
+                        height:5px;
+                        border-radius:5px;
+                        margin:auto;
+                        background:none;
+                        transition:.5s ease-in-out all;
+                    }
+                }
+                .classroom-navigation-item-active{
+                    transition:.5s ease-in-out all;
+                    color:#000;
+                    .dot{
+                        background:#184d47;
+                        transition:.5s ease-in-out all;
+                    }
+                }
+            }
+            .classroom-list{
+                .classroom-list-item{
+                    box-shadow:0px 0px 20px -5px rgba(0,0,0,0.2);
+                    background:#fff;
+                    padding:10px;
+                    display:grid;
+                    grid-template-columns:1fr 2fr;
+                    border-radius:10px;
+                    margin-bottom:40px;
+                    transition:.5s ease-in-out all;
+                    &:hover{
+                        box-shadow:0px 8px 20px 10px rgba(0,0,0,0.2);
+                        transition:.5s ease-in-out all;
+                    }
+                    .image{
+                        background:grey;
+                        min-height:150px;
+                        border-radius:10px;
+                    }
+                    .classroom-list-item-content{
+                        padding:10px 15px;
+                        .head{
+                            font-weight:bold;
+                            display:flex;
+                            justify-content:space-between;
+                            .start{
+                                color:grey;
+                                margin-right:10px;
+                            }
+                        }
+                        .progress-line{
+                            height:5px;
+                            background:#dadada;
+                            border-radius:10px;
+                            position:relative;
+                            width:30%;
+                            margin:20px 0;
+                            .progress-line-inner{
+                                position:absolute;
+                                top:0;
+                                left:0;
+                                height:100%;
+                                width:80%;
+                                border-radius:10px;
+                            }
+                        }
+                        .description{
+                            width:70%;
+                            margin:10px 0;
+                        }
+                        .font-10{
+                            display:flex;
+                            justify-content:space-between;
+                            .tags{
+                                margin-top:30px;
+                                span{
+                                    padding:5px 10px;
+                                    margin-right:10px;
+                                    border-radius:5px;
+                                }
+                            }
+                            .view{
+                                padding-top:30px;
+                                img{
+                                    width:20px;
+                                    cursor:pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .classroom-content-details{
+                width:0%;
+                height:100vh;
+                background:rgb(243, 243, 243);
+                position:absolute;
+                top:0;
+                right:0;
+                transition: .5s ease-in-out all;
+                overflow-y:hidden;
+                .scrollable-container{
+                    top:0;
+                }
+                .classroom-content-container{
+                    position:relative;
+                    .classroom-content-container-inner{
+                        padding-bottom:100px;
+                        .video{
+                            background:darkblue;
+                            height:500px;
+                            width:95%;
+                            margin:25px auto 0 auto;
+                        }
+                        .text{
+                            padding:0 25px;
+                            margin-top:50px;
+                            .tags{
+                                margin-top:30px;
+                                text-align:right;
+                                span{
+                                    box-shadow:0px 0px 20px -5px rgba(0,0,0,0.2);
+                                    padding:5px 10px;
+                                    margin-right:10px;
+                                    border-radius:5px;
+                                }
+                            }
+                            .font-30{
+                                font-weight:bolder;
+                            }
+                            .image{
+                                margin:60px auto;
+                                height:300px;
+                                width:80%;
+                                background:#dadada;
+                                border-radius:5px;
+                            }
+                        }
+                    }
+                }
+            }
+            .classroom-content-details-open{
+                width:100%!important;
+                transition: .5s ease-in-out all;
+            }
+        }
+        .section-content-inner-content-open{
+            height:100vh;
+            overflow-y:hidden!important;
+        }
+    }
+    
+}

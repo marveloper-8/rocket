@@ -1,0 +1,70 @@
+.desktop-alt, .tablet, .mobile, .tablet-landscape{
+    display:none!important;
+}
+.desktop{
+    display:block!important;
+}
+
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+
+/* tablet landscape */
+@media screen and (max-width:1366px){
+    .tablet-landscape-alt, .desktop, .mobile, .tablet{
+        display:none!important;
+    }
+    .tablet-landscape, .desktop-alt, .mobile-alt, .tablet-alt{
+        display:block!important;
+    }
+}
+
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+
+/* tablet portrait */
+@media screen and (max-width:1024px){
+    .tablet-alt, .mobile, .tablet-landscape, .desktop{
+        display:none!important;
+    }
+    .tablet, .mobile-alt, .tablet-landsccape-alt, .desktop-alt{
+        display:block!important;
+    }
+}
+
+
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+/* break */
+
+/* mobile */
+@media screen and (max-width:426px){
+    .mobile-alt, .desktop, .tablet, .tablet-landscape{
+        display:none!important;
+    }
+    .mobile, .desktop-alt, .tablet-alt, .tablet-landscape-alt{
+        display:block!important;
+    }
+}

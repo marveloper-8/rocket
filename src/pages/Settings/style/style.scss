@@ -1,0 +1,143 @@
+.settings{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    min-height:100vh;
+    .scrollable-container{
+        position:relative!important;
+        top:0!important;
+        width:auto!important;
+    }
+    .left{
+        border-right:.5px #dadada solid;
+        height:100%;
+        position:relative;
+        .font-30{
+            font-weight:bolder;
+            padding:50px 25px 25px 25px;
+        }
+        .list{
+            padding:0;
+            height:77.5vh;
+            .item{
+                display:grid;
+                grid-template-columns:1fr 4fr;
+                transition:.5s ease-in-out all;
+                padding:20px 25px 0 25px;
+                opacity:.5;
+                cursor:pointer;
+                &:hover{
+                    transition:.5s ease-in-out all;
+                    opacity:1;
+                    img{
+                        transform:rotate(190deg);
+                        transition:.25s ease-in-out all;
+                    }
+                }
+                .image{
+                    width:30px;
+                    height:30px;
+                    background:grey;
+                    position:relative;
+                    border-radius:30px;
+                }
+                .text{
+                    border-bottom:.5px #dadada solid;
+                    padding-bottom:20px;
+                    .top{
+                        display:flex;
+                        justify-content:space-between;
+                        font-weight:bold;
+                        margin-bottom:7.5px;
+                        .arrow{
+                            img{
+                                width:10px;
+                                transition:.25s ease-in-out all;
+                            }
+                        }
+                    }
+                }
+            }
+            .active{
+                opacity:1;
+            }
+        }
+    }
+    .right{
+        padding:50px 30px;
+        overflow-x:hidden!important;
+        .top{
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:30px;
+            padding-bottom:10px;
+            border-bottom:.5px #dadada solid;
+            .search-input{
+                top:0;
+            }
+        }
+        .top-2{
+            text-align:right;
+        }
+        .settings-container{
+            background:#fff;
+            form{
+                border-bottom:.5px solid #dadada;
+                margin-bottom:20px;
+            }
+            form:last-child{
+                border:none;
+            }
+            .inner{
+                top:0;
+                left:0;
+                position:relative;
+                width:97.5%;
+            }
+            .font-15{
+                margin-bottom:20px;
+            }
+            .accordion{
+                width:95%;
+                margin:20px auto;
+                .accordion-top{
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                    padding:15px;
+                    border-bottom:.5px #dadada solid;
+                    img{
+                        height:12px;
+                        transform:rotate(90deg);
+                        cursor:pointer;
+                        transition:.25s ease-in-out all;
+                        &:hover{
+                            transform:rotate(270deg);
+                            transition:.25s ease-in-out all;
+                        }
+                    }
+                    img.active{
+                        transform:rotate(270deg);
+                        transition:.25s ease-in-out all;
+                        &:hover{
+                            transform:rotate(90deg);
+                            transition:.25s ease-in-out all;
+                        }
+                    }
+                }
+                .accordion-content{
+                    transition:.5s ease all;
+                    height:0;
+                    overflow-y:hidden;
+                    padding:0 15px;
+                    .inner{
+                        padding:15px 0;
+                    }
+                }
+                .accordion-content-open{
+                    transition:.5s ease all;
+                    height:auto;
+                }
+            }
+        }
+    }
+}

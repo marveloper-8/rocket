@@ -1,0 +1,159 @@
+.popup{
+    *{
+        transition:.5s ease-in-out all;
+    }
+    transition:.5s ease-in-out all;
+    .card{
+        position:absolute;
+        z-index:20;
+        top:0;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        transition:.5s ease-in-out all;
+        padding:30px;
+        right:0px;
+        z-index:100;
+        .close{
+            width:30px;
+            height:30px;
+            border-radius:30px;
+            justify-content:center;
+            display:flex;
+            align-items:center;
+            background:#fff;
+            position:absolute;
+            right:0;
+            top:-20px;
+            cursor:pointer;
+            box-shadow:0px 0px 10px -2px rgba(0,0,0,0.5);
+            span{
+                color:#f00;
+                font-size:20px;
+            }
+        }
+        .border-right{
+            border-right:.5px #dadada solid;
+
+        }
+        .card-inner{
+            position:relative;
+            padding:10px 20px;
+            display:inline-block;
+            cursor:pointer;
+            transition:.5s ease-in-out all;
+            .chart{
+                width:100px;
+                height:100px;
+                transition:.5s ease-in-out all;
+            }
+            &:hover{
+                transition:.5s ease-in-out all;
+                box-shadow:0 0px 20px 3px rgba(0,0,0,0.2);
+                border-radius:20px;
+            }
+            .font-16{
+                margin-top:15px;
+                text-align:center;
+                font-weight:bold;
+            }
+        }
+        .card-container-active{
+            display:grid;
+            grid-template-columns:1fr 5fr;
+            transition:.5s ease-in-out all;
+        }
+        .chart-list{
+            padding:0 25px;
+            width:100%;
+            height:100%;
+            position:relative;
+            transition:.5s ease-in-out all;
+            .scrollable-container{
+                display:grid;
+                grid-template-columns:1fr 1fr 1fr 1fr;
+                width:100%;
+                max-height:350px;
+                transition:.5s ease-in-out all;
+                .card-inner{
+                    position:relative;
+                    padding:10px 20px;
+                    display:inline-block;
+                    cursor:default;
+                    transition:.5s ease-in-out all;
+                    text-align:center;
+                    .chart{
+                        width:75px;
+                        height:75px;
+                        margin:0;
+                        svg{
+                            margin:auto;
+                        }
+                    }
+                    &:hover{
+                        transition:.5s ease-in-out all;
+                        box-shadow:none;
+                        border-radius:20px;
+                    }
+                    .font-12{
+                        margin-top:15px;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+        .card-inner-active{
+            position:relative;
+            padding:10px 20px;
+            display:inline-block;
+            transition:.5s ease-in-out all;
+            .arrow-back{
+                img{
+                    width:20px;
+                    cursor:pointer;
+                }
+            }
+            .chart{
+                width:200px;
+                height:200px;
+                transition:.5s ease-in-out all;
+            }
+            .font-16{
+                margin-top:15px;
+                text-align:center;
+                font-weight:bold;
+                font-size:25px;
+            }
+        }
+        .card-inner-inactive{
+            display:none;
+        }
+    }
+    .card-academic-active{
+        width:800px;
+        right:0;
+        transition:.5s ease-in-out all;
+    }
+    .card-performance-active{
+        width:800px;
+        right:0;
+        transition:.5s ease-in-out all;
+    }
+}
+
+.popup-close{
+    width:0;
+    height:0;
+    transition:.5s ease-in-out all;
+    .popup-background{
+        transition:.5s ease-in-out all;
+        top:100vh;
+    }
+    .card{
+        top:-100vh;
+        transition:.5s ease-in-out all;
+    }
+    .card-performance-active, .card-academic-active{
+        width:0;
+        height:0;
+    }
+}
